@@ -1,9 +1,11 @@
+package src;
+
 public class Lucky {
     private static int x = 0;
     private static int count = 0;
 
     static class LuckyThread extends Thread {
-        static Object lock = new Object();
+        private static final Object lock = new Object();
         @Override
         public void run() {
             synchronized (lock)
